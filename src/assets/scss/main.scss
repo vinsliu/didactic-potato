@@ -1,0 +1,10 @@
+// Main SCSS entry
+@import "variables";
+@import "theme";
+@import "layout";
+
+// small utilities
+* { box-sizing: border-box; }
+
+/* Improve default button visuals */
+button { font-family: inherit; }

@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "watch-css": "sass --watch src/assets/scss/main.scss:src/assets/css/style.css",
     "dev": "vite",
-    "build": "vite build",
+    "build-css": "sass src/assets/scss/main.scss src/assets/css/style.css --no-source-map --style=compressed",
+    "build": "npm run build-css && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"

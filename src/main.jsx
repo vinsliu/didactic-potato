@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./assets/css/theme.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/css/style.css";
 import App from "./App";
 
 createRoot(document.getElementById("root")).render(

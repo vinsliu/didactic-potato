@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import Button from "react-bootstrap/Button";
 
 export default function Header() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    // load persisted theme or default to light
     const stored = localStorage.getItem("theme");
     const initial = stored === "dark" ? "dark" : "light";
     setTheme(initial);
@@ -13,7 +13,6 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    // keep document and storage in sync
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
@@ -23,42 +22,25 @@ export default function Header() {
   }
 
   return (
-    <aside
-      style={{
-        width: 220,
-        minHeight: "100vh",
-        borderRight: "1px solid var(--muted, #eee)",
-        padding: "1rem",
-        boxSizing: "border-box",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-      }}
-    >
+    <aside className="site-header">
       <div>
-        <div style={{ marginBottom: "1.5rem" }}>
-          <h2 style={{ margin: 0 }}>Dev Full Stack</h2>
-          <small style={{ color: "var(--muted, #666)" }}>Vincent Liu</small>
+        <div className="header-top">
+          <h2>Dev Full Stack</h2>
+          <small>Vincent Liu</small>
         </div>
 
         <Navbar />
       </div>
 
-      <div style={{ marginTop: "1rem" }}>
-        <button
+      <div className="header-bottom">
+        <Button
+          variant="outline-primary"
           onClick={toggleTheme}
           aria-label="Basculer le thème clair/sombre"
-          style={{
-            width: "100%",
-            padding: "0.5rem 0.75rem",
-            borderRadius: 6,
-            border: "1px solid var(--muted, #ccc)",
-            background: "transparent",
-            cursor: "pointer",
-          }}
+          className="theme-toggle"
         >
           {theme === "light" ? "SOMBRE" : "CLAIR"}
-        </button>
+        </Button>
       </div>
     </aside>
   );
