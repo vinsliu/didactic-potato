@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Button from "react-bootstrap/Button";
+import { getStoredTheme, toggleTheme as toggleThemeUtil } from "../assets/js/theme";
 
 export default function Header() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    const initial = stored === "dark" ? "dark" : "light";
-    setTheme(initial);
-    document.documentElement.setAttribute("data-theme", initial);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  // initialize state from storage synchronously to avoid overwriting on mount
+  const [theme, setTheme] = useState(() => getStoredTheme());
 
   function toggleTheme() {
-    setTheme((t) => (t === "light" ? "dark" : "light"));
+    // toggleThemeUtil saves the next theme and applies it on the document
+    setTheme((t) => toggleThemeUtil(t));
   }
 
   return (
