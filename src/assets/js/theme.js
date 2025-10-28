@@ -1,4 +1,3 @@
-// Utility module to manage theme (light/dark) using localStorage and data-theme attribute
 export function getStoredTheme() {
   try {
     const stored = localStorage.getItem('theme');
