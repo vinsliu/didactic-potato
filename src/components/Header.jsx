@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Button from "react-bootstrap/Button";
-import { getStoredTheme, toggleTheme as toggleThemeUtil } from "../assets/js/theme";
+import DefaultIcon from "../assets/img/Default-Squared.png";
+import {
+  getStoredTheme,
+  toggleTheme as toggleThemeUtil,
+} from "../assets/js/theme";
 
 export default function Header() {
-  // initialize state from storage synchronously to avoid overwriting on mount
   const [theme, setTheme] = useState(() => getStoredTheme());
 
   function toggleTheme() {
-    // toggleThemeUtil saves the next theme and applies it on the document
     setTheme((t) => toggleThemeUtil(t));
   }
 
@@ -16,7 +18,9 @@ export default function Header() {
     <aside className="site-header">
       <div>
         <div className="header-top">
-          <h2>Dev Full Stack</h2>
+          <h2>
+            <img src={DefaultIcon} alt="Vins Liu Icon" width={50} />
+          </h2>
           <small>Vincent Liu</small>
         </div>
 
