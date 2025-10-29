@@ -1,0 +1,51 @@
+// Component: Page section grid
+// Reusable two-column grid for pages that need a left column (controls)
+// and a right column (content). Apply by adding `page-section--grid` to
+// any element that also has `page-section` (eg. `<section class="page-section page-section--grid">`).
+
+.page-section--grid {
+  // Mobile / narrow: single-column, stacked layout
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+
+  // Generic spacing for any title element placed first
+  > :nth-child(1) {
+    margin: 0 0 0.5rem 0;
+  }
+
+  // By default any other children just follow in flow (stacked)
+
+  @media (min-width: 720px) {
+    // Desktop: two-column layout
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+
+    // Position children by index (no extra classes required):
+    // 1) first child spans the full width at the top (title)
+    > :nth-child(1) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+
+    // 2) second child -> left column, second row
+    > :nth-child(2) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      align-self: start;
+      padding-right: 0.5rem;
+      border-right: 1px solid var(--muted);
+    }
+
+    // 3) third child -> right column, second row
+    > :nth-child(3) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      padding-left: 1rem;
+    }
+
+    // If there are more children, they will flow into the grid below
+  }
+}

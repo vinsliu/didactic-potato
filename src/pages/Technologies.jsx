@@ -139,7 +139,7 @@ export default function Technologies() {
   const effectiveActive = active ?? technologies[0]?.id ?? null;
 
   return (
-    <section className="technologies page-section">
+    <section className="technologies page-section page-section--grid">
       <h2>Technologies</h2>
 
       <div className="tech-grid">
