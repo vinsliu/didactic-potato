@@ -13,8 +13,12 @@
   .header-top {
     margin-bottom: 1.5rem;
 
-    h2 { margin: 0; }
-    small { color: var(--muted); }
+    h2 {
+      margin: 0;
+    }
+    small {
+      color: var(--muted);
+    }
   }
 
   .site-nav {
@@ -23,6 +27,15 @@
     .nav-link {
       padding: 0.25rem 0;
       color: var(--text);
+      border-radius: 6px;
+      transition: background-color 150ms ease, color 150ms ease,
+        padding-left 150ms ease;
+
+      &:hover {
+        background: var(--hover-bg);
+        color: var(--hover-text);
+        padding-left: 0.5rem;
+      }
 
       &.active {
         font-weight: 600;
@@ -34,7 +47,35 @@
     margin-top: 1rem;
 
     .theme-toggle {
+      color: var(--text);
       width: 100%;
+      background: transparent;
+      border: 1px solid var(--muted);
+      box-shadow: none;
+      padding: 0.45rem 0.75rem;
+      transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+
+      // Ensure we override bootstrap outline/variant styles
+      &.btn,
+      &.btn-outline-primary,
+      &.btn-outline-secondary {
+        background: transparent;
+        border: 1px solid var(--muted);
+        color: var(--text);
+        box-shadow: none;
+      }
+
+      &:hover {
+        background: var(--hover-bg);
+        color: var(--hover-text);
+        border-color: transparent;
+      }
+
+      &:focus,
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
     }
   }
 }
@@ -45,5 +86,10 @@ main {
 }
 
 @media (max-width: 768px) {
-  .site-header { width: 100%; min-height: auto; border-right: none; border-bottom: 1px solid var(--muted); }
+  .site-header {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
 }

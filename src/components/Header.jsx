@@ -15,13 +15,13 @@ export default function Header() {
   }
 
   return (
-    <aside className="site-header">
+    <header className="site-header">
       <div>
         <div className="header-top">
           <h2>
             <img src={DefaultIcon} alt="Vins Liu Icon" width={50} />
           </h2>
-          <small>Vincent Liu</small>
+          <small>Vins Liu</small>
         </div>
 
         <Navbar />
@@ -37,6 +37,6 @@ export default function Header() {
           {theme === "light" ? "SOMBRE" : "CLAIR"}
         </Button>
       </div>
-    </aside>
+    </header>
   );
 }

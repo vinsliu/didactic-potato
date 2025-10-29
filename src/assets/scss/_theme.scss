@@ -5,6 +5,8 @@
   --text: #{$text-light};
   --muted: #{$muted-light};
   --accent: #{$accent-light};
+  --hover-bg: #{$bg-dark};
+  --hover-text: #{$text-dark};
 }
 
 [data-theme="dark"] {
@@ -12,6 +14,8 @@
   --text: #{$text-dark};
   --muted: #{$muted-dark};
   --accent: #{$accent-dark};
+  --hover-bg: #{$bg-light};
+  --hover-text: #{$text-light};
 }
 
 html, body { height: 100%; margin: 0; }

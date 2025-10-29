@@ -7,7 +7,7 @@ export default function Projects() {
         height: "100%",
       }}
     >
-      <h1>Projets</h1>
+      <h2>Projets</h2>
     </section>
   );
 }

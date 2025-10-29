@@ -7,7 +7,7 @@ export default function Contact() {
         height: "100%",
       }}
     >
-      <h1>Contact</h1>
+      <h2>Contact</h2>
     </section>
   );
 }
