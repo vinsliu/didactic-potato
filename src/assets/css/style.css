@@ -144,11 +144,29 @@ a {
   box-shadow: none;
 }
 
+.page-section {
+  width: auto;
+}
+.page-section h2 {
+  cursor: default;
+  user-select: none;
+}
+
 main {
   flex: 1;
   padding: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
+}
+/* Import all per-page partials here so main.scss can include a single file */
+/* Styles specific to the Technologies page */
 .technologies .tech-grid {
   display: flex;
   flex-direction: column;
@@ -187,14 +205,22 @@ main {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .site-header {
-    width: 100%;
-    min-height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--muted);
-  }
+/* Home page specific styles (placeholder) */
+.home-page .hero {
+  margin-bottom: 1.5rem;
 }
+
+/* Projects page specific styles (placeholder) */
+.projects-page .projects-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Contact page specific styles (placeholder) */
+.contact-page form {
+  max-width: 540px;
+}
+
 * {
   box-sizing: border-box;
 }

@@ -4,61 +4,24 @@ export default function Technologies() {
   const [active, setActive] = useState(null);
 
   const sections = [
-    { id: "langages", label: "Langages" },
-    { id: "frameworks", label: "Frameworks & Librairies" },
-    { id: "bdd", label: "Base de données" },
-    { id: "outils", label: "Outils & Environnement" },
-    { id: "hebergements", label: "Hébergement" },
-    { id: "design", label: "Design & UI" },
-    { id: "autres", label: "Autres" },
-  ];
-
-  function toggle(id) {
-    setActive((cur) => (cur === id ? null : id));
-  }
-
-  return (
-    <section className="technologies">
-      <h2>Technologies</h2>
-
-      <div className="tech-grid">
-        {sections.map((s) => (
-          <h3 key={s.id}>
-            <button
-              type="button"
-              className={
-                "nav-link tech-toggle" + (active === s.id ? " active" : "")
-              }
-              onClick={() => toggle(s.id)}
-              aria-expanded={active === s.id}
-              aria-controls={s.id}
-            >
-              {s.label}
-            </button>
-          </h3>
-        ))}
-      </div>
-
-      <div className="tech-panels">
-        <section
-          id="langages"
-          className={"tech-panel" + (active === "langages" ? " is-active" : "")}
-        >
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3 / Sass</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>SQL / NoSQL</li>
-          </ul>
-        </section>
-
-        <section
-          id="frameworks"
-          className={
-            "tech-panel" + (active === "frameworks" ? " is-active" : "")
-          }
-        >
+    {
+      id: "langages",
+      label: "Langages",
+      content: (
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3 / Sass</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>SQL / NoSQL</li>
+        </ul>
+      ),
+    },
+    {
+      id: "frameworks",
+      label: "Frameworks & Librairies",
+      content: (
+        <>
           <div className="frontend">
             <h4>Frontend</h4>
             <ul>
@@ -82,64 +45,103 @@ export default function Technologies() {
               <li>TailwindCSS</li>
             </ul>
           </div>
-        </section>
+        </>
+      ),
+    },
+    {
+      id: "bdd",
+      label: "Base de données",
+      content: (
+        <ul>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+        </ul>
+      ),
+    },
+    {
+      id: "outils",
+      label: "Outils & Environnement",
+      content: (
+        <ul>
+          <li>Git / GitHub</li>
+          <li>VS Code</li>
+          <li>Vite</li>
+          <li>Postman</li>
+          <li>NPM</li>
+        </ul>
+      ),
+    },
+    {
+      id: "hebergements",
+      label: "Hébergement",
+      content: (
+        <ul>
+          <li>GitHub Pages</li>
+          <li>Vercel</li>
+          <li>Ubuntu Server</li>
+        </ul>
+      ),
+    },
+    {
+      id: "design",
+      label: "Design & UI",
+      content: (
+        <ul>
+          <li>Figma</li>
+          <li>Canva</li>
+        </ul>
+      ),
+    },
+    {
+      id: "autres",
+      label: "Autres",
+      content: (
+        <ul>
+          <li>SEO</li>
+          <li>API Rest</li>
+          <li>CI/CD</li>
+        </ul>
+      ),
+    },
+  ];
 
-        <section
-          id="bdd"
-          className={"tech-panel" + (active === "bdd" ? " is-active" : "")}
-        >
-          <ul>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-          </ul>
-        </section>
+  function toggle(id) {
+    setActive((cur) => (cur === id ? null : id));
+  }
 
-        <section
-          id="outils"
-          className={"tech-panel" + (active === "outils" ? " is-active" : "")}
-        >
-          <ul>
-            <li>Git / GitHub</li>
-            <li>VS Code</li>
-            <li>Vite</li>
-            <li>Postman</li>
-            <li>NPM</li>
-          </ul>
-        </section>
+  return (
+    <section className="technologies page-section">
+      <h2>Technologies</h2>
 
-        <section
-          id="hebergements"
-          className={
-            "tech-panel" + (active === "hebergements" ? " is-active" : "")
-          }
-        >
-          <ul>
-            <li>GitHub Pages</li>
-            <li>Vercel</li>
-            <li>Ubuntu Server</li>
-          </ul>
-        </section>
+      <div className="tech-grid">
+        {sections.map((s) => (
+          <h3 key={s.id}>
+            <button
+              type="button"
+              className={
+                "nav-link tech-toggle" + (active === s.id ? " active" : "")
+              }
+              onClick={() => toggle(s.id)}
+              aria-expanded={active === s.id}
+              aria-controls={s.id}
+            >
+              {s.label}
+            </button>
+          </h3>
+        ))}
+      </div>
 
-        <section
-          id="design"
-          className={"tech-panel" + (active === "design" ? " is-active" : "")}
-        >
-          <ul>
-            <li>Figma</li>
-            <li>Canva</li>
-          </ul>
-        </section>
-
-        <section
-          id="autres"
-          className={"tech-panel" + (active === "autres" ? " is-active" : "")}
-        >
-          <ul>
-            <li>SEO</li>
-            <li>API Rest</li>
-            <li>CI/CD</li>
-          </ul>
-        </section>
+      <div className="tech-panels">
+        {sections.map((s) => (
+          <section
+            key={s.id}
+            id={s.id}
+            className={"tech-panel" + (active === s.id ? " is-active" : "")}
+            aria-hidden={active !== s.id}
+          >
+            {s.content}
+          </section>
+        ))}
       </div>
     </section>
   );
