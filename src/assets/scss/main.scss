@@ -1,4 +1,5 @@
 // Main SCSS entry
+@import "fonts";
 @import "variables";
 @import "theme";
 @import "layout";
@@ -8,3 +9,6 @@
 
 /* Improve default button visuals */
 button { font-family: inherit; }
+
+/* Set site-wide font to Neue Montreal Mono (fallbacks provided) */
+body { font-family: "Neue Montreal Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Liberation Mono", monospace; }

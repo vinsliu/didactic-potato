@@ -27,6 +27,7 @@
     .nav-link {
       padding: 0.25rem 0;
       color: var(--text);
+      font-weight: 500;
       border-radius: 6px;
       transition: background-color 150ms ease, color 150ms ease,
         padding-left 150ms ease;
@@ -48,14 +49,15 @@
 
     .theme-toggle {
       color: var(--text);
+      font-weight: 500;
       width: 100%;
       background: transparent;
       border: 1px solid var(--muted);
       box-shadow: none;
       padding: 0.45rem 0.75rem;
-      transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+      transition: background-color 150ms ease, color 150ms ease,
+        border-color 150ms ease;
 
-      // Ensure we override bootstrap outline/variant styles
       &.btn,
       &.btn-outline-primary,
       &.btn-outline-secondary {
