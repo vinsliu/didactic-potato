@@ -7,6 +7,9 @@ export default function Navbar() {
       <Nav.Link as={Link} to="/">
         Accueil
       </Nav.Link>
+      <Nav.Link as={Link} to="/technologies">
+        Tchnologies
+      </Nav.Link>
       <Nav.Link as={Link} to="/projects">
         Projets
       </Nav.Link>
