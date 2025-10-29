@@ -166,81 +166,68 @@ button {
   box-shadow: none;
 }
 
-.page-section--grid {
+.split-panel {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   gap: 1rem;
 }
-.page-section--grid > :nth-child(1) {
-  margin: 0 0 0.5rem 0;
-}
-@media (min-width: 720px) {
-  .page-section--grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 1rem;
-  }
-  .page-section--grid > :nth-child(1) {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-  }
-  .page-section--grid > :nth-child(2) {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: start;
-    padding-right: 0.5rem;
-    border-right: 1px solid var(--muted);
-  }
-  .page-section--grid > :nth-child(3) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    padding-left: 1rem;
-  }
-}
-
-/* Styles specific to the Technologies page */
-.technologies h2 {
-  margin: 0 0 0.5rem 0;
-}
-.technologies .tech-grid {
+.split-panel .split-controls {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.technologies .tech-grid h3 {
+.split-panel .split-controls h3 {
   margin: 0;
 }
-.technologies .tech-grid .nav-link {
+.split-panel .split-controls .nav-link {
   display: inline-block;
   padding: 0.25rem 0;
   color: var(--text);
   border-radius: 6px;
   transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease, padding-right 150ms ease;
 }
-.technologies .tech-grid .nav-link:hover {
+.split-panel .split-controls .nav-link:hover {
   background: var(--hover-bg);
   color: var(--hover-text);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.technologies .tech-grid .nav-link.active {
+.split-panel .split-controls .nav-link.active {
   font-weight: 600;
   background: var(--hover-bg);
   color: var(--hover-text);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.technologies .tech-panels {
+.split-panel .split-content {
   margin-top: 0;
 }
-.technologies .tech-panels .tech-panel {
+.split-panel .split-content .split-item {
   display: none;
 }
-.technologies .tech-panels .tech-panel.is-active {
+.split-panel .split-content .split-item.is-active {
   display: block;
 }
+@media (min-width: 720px) {
+  .split-panel {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.25rem;
+  }
+  .split-panel .split-controls {
+    padding-right: 0.5rem;
+    border-right: 1px solid var(--muted);
+  }
+  .split-panel .split-content {
+    padding-left: 1rem;
+  }
+}
 
+/* Technologies page styles
+   Most of the layout and component presentation is handled by
+   `components/_tech-split.scss` (TechSplit component). Keep this file
+   for any page-specific overrides in the future. */
 /* Home page specific styles (placeholder) */
 .home-page .hero {
   margin-bottom: 1.5rem;

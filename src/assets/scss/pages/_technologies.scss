@@ -1,35 +1,5 @@
-/* Styles specific to the Technologies page */
-.technologies {
-  // The layout (two-column grid) is provided by the reusable
-  // `.page-section--grid` component in `components/_page-section-grid.scss`.
-  // Apply that class on the page element to enable the grid.
+/* Technologies page styles
+   Most of the layout and component presentation is handled by
+   `components/_tech-split.scss` (TechSplit component). Keep this file
+   for any page-specific overrides in the future. */
 
-  h2 { margin: 0 0 0.5rem 0; }
-
-  .tech-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    h3 { margin: 0; }
-
-    .nav-link {
-      display: inline-block;
-      padding: 0.25rem 0;
-      color: var(--text);
-      border-radius: 6px;
-      transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease, padding-right 150ms ease;
-
-      &:hover { background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
-
-      &.active { font-weight: 600; background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
-    }
-  }
-
-  .tech-panels {
-    margin-top: 0;
-
-    .tech-panel { display: none; }
-    .tech-panel.is-active { display: block; }
-  }
-}

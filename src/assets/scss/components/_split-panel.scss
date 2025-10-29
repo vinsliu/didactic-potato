@@ -1,0 +1,56 @@
+// Component: Split panel
+// Styles for the generic SplitPanel component. Kept under components
+// so the component is portable across pages.
+
+.split-panel {
+  // Layout: stacked on small screens, two columns on wider screens
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+
+  // Controls occupy the first slot, content flows after
+  .split-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 { margin: 0; }
+
+    .nav-link {
+      display: inline-block;
+      padding: 0.25rem 0;
+      color: var(--text);
+      border-radius: 6px;
+      transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease, padding-right 150ms ease;
+
+      &:hover { background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
+
+      &.active { font-weight: 600; background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
+    }
+  }
+
+  .split-content {
+    margin-top: 0;
+
+    .split-item { display: none; }
+    .split-item.is-active { display: block; }
+  }
+
+  @media (min-width: 720px) {
+    // Desktop: left column for controls, right for content
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.25rem;
+
+    .split-controls {
+      // left column styling
+      padding-right: 0.5rem;
+      border-right: 1px solid var(--muted);
+    }
+
+    .split-content {
+      padding-left: 1rem;
+    }
+  }
+}
