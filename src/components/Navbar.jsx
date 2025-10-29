@@ -8,7 +8,7 @@ export default function Navbar() {
         Accueil
       </Nav.Link>
       <Nav.Link as={Link} to="/technologies">
-        Tchnologies
+        Technologies
       </Nav.Link>
       <Nav.Link as={Link} to="/projects">
         Projets

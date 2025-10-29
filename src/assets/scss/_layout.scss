@@ -40,6 +40,10 @@
 
       &.active {
         font-weight: 600;
+        background: var(--hover-bg);
+        color: var(--hover-text);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
       }
     }
   }
@@ -85,6 +89,46 @@
 main {
   flex: 1;
   padding: 1.5rem;
+}
+
+.technologies {
+  .tech-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3 { margin: 0; }
+
+    .nav-link {
+      display: inline-block;
+      padding: 0.25rem 0;
+      color: var(--text);
+      border-radius: 6px;
+      transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease, padding-right 150ms ease;
+
+      &:hover {
+        background: var(--hover-bg);
+        color: var(--hover-text);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      &.active {
+        font-weight: 600;
+        background: var(--hover-bg);
+        color: var(--hover-text);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .tech-panels {
+    margin-top: 1rem;
+
+    .tech-panel { display: none; }
+    .tech-panel.is-active { display: block; }
+  }
 }
 
 @media (max-width: 768px) {
