@@ -1,0 +1,18 @@
+// Component: Navigation
+// Styles for the vertical site navigation used in the sidebar/header.
+
+.site-nav {
+  margin-top: 0.25rem;
+
+  .nav-link {
+    padding: 0.25rem 0;
+    color: var(--text);
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease;
+
+    &:hover { background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; }
+
+    &.active { font-weight: 600; background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
+  }
+}

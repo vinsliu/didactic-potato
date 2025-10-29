@@ -3,6 +3,8 @@
 
 // Example placeholder: button reset used across the site
 // (kept minimal — move/extend to _button.scss if needed)
-button {
-  font-family: inherit;
-}
+button { font-family: inherit; }
+
+// Import component partials
+@import "nav";
+@import "header";

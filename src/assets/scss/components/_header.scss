@@ -1,0 +1,48 @@
+// Component: Header
+// Styles for the left column header / sidebar (logo, nav wrapper, theme toggle).
+
+@import "../base/variables";
+
+.site-header {
+  width: $header-width;
+  min-height: 100vh;
+  border-right: 1px solid var(--muted);
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header-top {
+    margin-bottom: 1.5rem;
+
+    h2 { margin: 0; }
+    small { color: var(--muted); }
+  }
+
+  .header-bottom {
+    margin-top: 1rem;
+
+    .theme-toggle {
+      color: var(--text);
+      font-weight: 500;
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--muted);
+      box-shadow: none;
+      padding: 0.45rem 0.75rem;
+      transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+
+      &.btn, &.btn-outline-primary, &.btn-outline-secondary {
+        background: transparent;
+        border: 1px solid var(--muted);
+        color: var(--text);
+        box-shadow: none;
+      }
+
+      &:hover { background: var(--hover-bg); color: var(--hover-text); border-color: transparent; }
+
+      &:focus, &:active { outline: none; box-shadow: none; }
+    }
+  }
+}

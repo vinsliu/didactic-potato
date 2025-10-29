@@ -73,6 +73,51 @@ a {
   color: var(--accent);
 }
 
+.page-section {
+  width: auto;
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  /* header is still .site-header but styles live in components/_header.scss */
+  .site-header {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
+}
+button {
+  font-family: inherit;
+}
+
+.site-nav {
+  margin-top: 0.25rem;
+}
+.site-nav .nav-link {
+  padding: 0.25rem 0;
+  color: var(--text);
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease;
+}
+.site-nav .nav-link:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+}
+.site-nav .nav-link.active {
+  font-weight: 600;
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .site-header {
   width: 220px;
   min-height: 100vh;
@@ -91,28 +136,6 @@ a {
 }
 .site-header .header-top small {
   color: var(--muted);
-}
-.site-header .site-nav {
-  margin-top: 0.25rem;
-}
-.site-header .site-nav .nav-link {
-  padding: 0.25rem 0;
-  color: var(--text);
-  font-weight: 500;
-  border-radius: 6px;
-  transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease;
-}
-.site-header .site-nav .nav-link:hover {
-  background: var(--hover-bg);
-  color: var(--hover-text);
-  padding-left: 0.5rem;
-}
-.site-header .site-nav .nav-link.active {
-  font-weight: 600;
-  background: var(--hover-bg);
-  color: var(--hover-text);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 .site-header .header-bottom {
   margin-top: 1rem;
@@ -141,27 +164,6 @@ a {
 .site-header .header-bottom .theme-toggle:focus, .site-header .header-bottom .theme-toggle:active {
   outline: none;
   box-shadow: none;
-}
-
-.page-section {
-  width: auto;
-}
-
-main {
-  flex: 1;
-  padding: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    width: 100%;
-    min-height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--muted);
-  }
-}
-button {
-  font-family: inherit;
 }
 
 /* Styles specific to the Technologies page */
