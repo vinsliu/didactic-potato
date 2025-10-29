@@ -36,8 +36,8 @@ export default function Technologies() {
               <li>Symfony</li>
             </ul>
           </div>
-          <div className="styling">
-            <h4>Styling</h4>
+          <div className="style">
+            <h4>Style</h4>
             <ul>
               <li>Bootstrap</li>
               <li>TailwindCSS</li>

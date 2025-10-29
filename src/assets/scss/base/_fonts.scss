@@ -1,3 +1,7 @@
+// Base: Fonts
+// Contains @font-face declarations for local fonts used across the site.
+// Keep webfont files in `src/assets/fonts/` and prefer woff2 for web if available.
+
 @font-face {
   font-family: "Neue Montreal Mono";
   src: url("../fonts/PPNeueMontrealMono-Thin.otf") format("opentype");

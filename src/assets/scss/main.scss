@@ -1,8 +1,14 @@
-@import "fonts";
-@import "variables";
-@import "theme";
-@import "layout";
-@import "pages";
+// Base (tokens, fonts, theme)
+@import "base/fonts";
+@import "base/variables";
+@import "base/theme";
+
+// Layout and components
+@import "layout/layout";
+@import "components/index";
+
+// Pages
+@import "pages/index";
 
 // small utilities
 * {

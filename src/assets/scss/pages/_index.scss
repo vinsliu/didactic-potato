@@ -1,0 +1,8 @@
+// Pages: per-page styles
+// Each page has its own partial imported here. Keep page-specific rules
+// inside their respective partial to avoid leaking layout styles.
+
+@import "technologies";
+@import "home";
+@import "projects";
+@import "contact";

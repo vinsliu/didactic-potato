@@ -1,3 +1,7 @@
+// Base: Theme
+// Defines CSS custom properties for light/dark themes using tokens from
+// `_variables.scss`. Keep only variables that are used globally.
+
 @import "variables";
 
 :root {

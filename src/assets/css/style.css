@@ -1,1 +1,271 @@
-@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-Thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap}@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-Book.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-RegularItalic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:"Neue Montreal Mono";src:url("../fonts/PPNeueMontrealMono-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}:root{--bg: #ffffff;--text: #0b1220;--muted: #6b7280;--accent: #0366d6;--hover-bg: #0b1016;--hover-text: #e6eef6}[data-theme=dark]{--bg: #0b1016;--text: #e6eef6;--muted: #9aa6b2;--accent: #61dafb;--hover-bg: #ffffff;--hover-text: #0b1220}html,body{height:100%;margin:0}body{background:var(--bg);color:var(--text);transition:background-color 180ms ease,color 180ms ease}a{color:var(--accent)}.site-header{width:220px;min-height:100vh;border-right:1px solid var(--muted);padding:1rem;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between}.site-header .header-top{margin-bottom:1.5rem}.site-header .header-top h2{margin:0}.site-header .header-top small{color:var(--muted)}.site-header .site-nav{margin-top:.25rem}.site-header .site-nav .nav-link{padding:.25rem 0;color:var(--text);font-weight:500;border-radius:6px;transition:background-color 150ms ease,color 150ms ease,padding-left 150ms ease}.site-header .site-nav .nav-link:hover{background:var(--hover-bg);color:var(--hover-text);padding-left:.5rem}.site-header .site-nav .nav-link.active{font-weight:600;background:var(--hover-bg);color:var(--hover-text);padding-left:.5rem;padding-right:.5rem}.site-header .header-bottom{margin-top:1rem}.site-header .header-bottom .theme-toggle{color:var(--text);font-weight:500;width:100%;background:rgba(0,0,0,0);border:1px solid var(--muted);box-shadow:none;padding:.45rem .75rem;transition:background-color 150ms ease,color 150ms ease,border-color 150ms ease}.site-header .header-bottom .theme-toggle.btn,.site-header .header-bottom .theme-toggle.btn-outline-primary,.site-header .header-bottom .theme-toggle.btn-outline-secondary{background:rgba(0,0,0,0);border:1px solid var(--muted);color:var(--text);box-shadow:none}.site-header .header-bottom .theme-toggle:hover{background:var(--hover-bg);color:var(--hover-text);border-color:rgba(0,0,0,0)}.site-header .header-bottom .theme-toggle:focus,.site-header .header-bottom .theme-toggle:active{outline:none;box-shadow:none}.page-section{width:auto}.page-section h2{cursor:default;user-select:none}main{flex:1;padding:1.5rem}@media(max-width: 768px){.site-header{width:100%;min-height:auto;border-right:none;border-bottom:1px solid var(--muted)}}.technologies{display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;grid-template-areas:"title" "body";gap:1rem}.technologies h2{grid-area:title;margin:0 0 .5rem 0}.technologies>.tech-grid,.technologies>.tech-panels{grid-area:body}.technologies .tech-grid{display:flex;flex-direction:column;gap:.5rem}.technologies .tech-grid h3{margin:0}.technologies .tech-grid .nav-link{display:inline-block;padding:.25rem 0;color:var(--text);border-radius:6px;transition:background-color 150ms ease,color 150ms ease,padding-left 150ms ease,padding-right 150ms ease}.technologies .tech-grid .nav-link:hover{background:var(--hover-bg);color:var(--hover-text);padding-left:.5rem;padding-right:.5rem}.technologies .tech-grid .nav-link.active{font-weight:600;background:var(--hover-bg);color:var(--hover-text);padding-left:.5rem;padding-right:.5rem}.technologies .tech-panels{margin-top:0}.technologies .tech-panels .tech-panel{display:none}.technologies .tech-panels .tech-panel.is-active{display:block}@media(min-width: 720px){.technologies{grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;grid-template-areas:"title title" "grid panels"}.technologies h2{grid-column:1/-1}.technologies>.tech-grid{grid-area:grid;padding-right:.5rem;border-right:1px solid var(--muted);align-self:start}.technologies>.tech-panels{grid-area:panels;padding-left:1rem}}.home-page .hero{margin-bottom:1.5rem}.projects-page .projects-grid{display:grid;gap:1rem}.contact-page form{max-width:540px}*{box-sizing:border-box}button{font-family:inherit}body{font-family:"Neue Montreal Mono",ui-monospace,SFMono-Regular,Menlo,Monaco,"Roboto Mono","Liberation Mono",monospace}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal Mono";
+  src: url("../fonts/PPNeueMontrealMono-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+:root {
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --accent: #0366d6;
+  --hover-bg: #0b1016;
+  --hover-text: #e6eef6;
+}
+
+[data-theme=dark] {
+  --bg: #0b1016;
+  --text: #e6eef6;
+  --muted: #9aa6b2;
+  --accent: #61dafb;
+  --hover-bg: #ffffff;
+  --hover-text: #0b1220;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+a {
+  color: var(--accent);
+}
+
+.site-header {
+  width: 220px;
+  min-height: 100vh;
+  border-right: 1px solid var(--muted);
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.site-header .header-top {
+  margin-bottom: 1.5rem;
+}
+.site-header .header-top h2 {
+  margin: 0;
+}
+.site-header .header-top small {
+  color: var(--muted);
+}
+.site-header .site-nav {
+  margin-top: 0.25rem;
+}
+.site-header .site-nav .nav-link {
+  padding: 0.25rem 0;
+  color: var(--text);
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease;
+}
+.site-header .site-nav .nav-link:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+}
+.site-header .site-nav .nav-link.active {
+  font-weight: 600;
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.site-header .header-bottom {
+  margin-top: 1rem;
+}
+.site-header .header-bottom .theme-toggle {
+  color: var(--text);
+  font-weight: 500;
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--muted);
+  box-shadow: none;
+  padding: 0.45rem 0.75rem;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.site-header .header-bottom .theme-toggle.btn, .site-header .header-bottom .theme-toggle.btn-outline-primary, .site-header .header-bottom .theme-toggle.btn-outline-secondary {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--text);
+  box-shadow: none;
+}
+.site-header .header-bottom .theme-toggle:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  border-color: transparent;
+}
+.site-header .header-bottom .theme-toggle:focus, .site-header .header-bottom .theme-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.page-section {
+  width: auto;
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
+}
+button {
+  font-family: inherit;
+}
+
+/* Styles specific to the Technologies page */
+.technologies {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "title" "body";
+  gap: 1rem;
+}
+.technologies h2 {
+  grid-area: title;
+  margin: 0 0 0.5rem 0;
+}
+.technologies > .tech-grid,
+.technologies > .tech-panels {
+  grid-area: body;
+}
+.technologies .tech-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.technologies .tech-grid h3 {
+  margin: 0;
+}
+.technologies .tech-grid .nav-link {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: var(--text);
+  border-radius: 6px;
+  transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease, padding-right 150ms ease;
+}
+.technologies .tech-grid .nav-link:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.technologies .tech-grid .nav-link.active {
+  font-weight: 600;
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.technologies .tech-panels {
+  margin-top: 0;
+}
+.technologies .tech-panels .tech-panel {
+  display: none;
+}
+.technologies .tech-panels .tech-panel.is-active {
+  display: block;
+}
+@media (min-width: 720px) {
+  .technologies {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "title title" "grid panels";
+  }
+  .technologies h2 {
+    grid-column: 1/-1;
+  }
+  .technologies > .tech-grid {
+    grid-area: grid;
+    padding-right: 0.5rem;
+    border-right: 1px solid var(--muted);
+    align-self: start;
+  }
+  .technologies > .tech-panels {
+    grid-area: panels;
+    padding-left: 1rem;
+  }
+}
+
+/* Home page specific styles (placeholder) */
+.home-page .hero {
+  margin-bottom: 1.5rem;
+}
+
+/* Projects page specific styles (placeholder) */
+.projects-page .projects-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Contact page specific styles (placeholder) */
+.contact-page form {
+  max-width: 540px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Improve default button visuals */
+button {
+  font-family: inherit;
+}
+
+/* Set site-wide font to Neue Montreal Mono (fallbacks provided) */
+body {
+  font-family: "Neue Montreal Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Liberation Mono", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */
