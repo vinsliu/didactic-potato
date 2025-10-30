@@ -7,11 +7,22 @@
 // Header styles have been moved to `components/_header.scss`.
 // Keep structural layout utilities here.
 
-.page-section { width: auto; }
+.page-section {
+  width: auto;
+  height: 100%;
+}
 
-main { flex: 1; padding: 1.5rem; }
+main {
+  flex: 1;
+  padding: 1.5rem;
+}
 
 @media (max-width: 768px) {
   /* header is still .site-header but styles live in components/_header.scss */
-  .site-header { width: 100%; min-height: auto; border-right: none; border-bottom: 1px solid var(--muted); }
+  .site-header {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--muted);
+  }
 }
