@@ -3,29 +3,20 @@ import SplitPanel from "../components/SplitPanel";
 export default function Projects() {
   const projects = [
     {
-      id: "One",
-      label: "Projet 1",
+      id: "password-generator",
+      label: "Générateur de mot de passe",
       content: (
         <>
-          <p>Projet 1</p>
-        </>
-      ),
-    },
-    {
-      id: "Two",
-      label: "Projet 2",
-      content: (
-        <>
-          <p>Projet 2</p>
-        </>
-      ),
-    },
-    {
-      id: "Three",
-      label: "Projet 3",
-      content: (
-        <>
-          <p>Projet 3</p>
+          <span>
+            Générateur de mot de passe avec la possibilité de choisir la
+            longueur de celui-ci.
+          </span>
+          <a
+            href="https://vinsliu.github.io/PasswordGenerator/"
+            target="_blank"
+          >
+            Lien
+          </a>
         </>
       ),
     },

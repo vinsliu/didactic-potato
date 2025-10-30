@@ -229,21 +229,8 @@ button {
    `components/_tech-split.scss` (TechSplit component). Keep this file
    for any page-specific overrides in the future. */
 /* Home page specific styles (placeholder) */
-.home-page .hero {
-  margin-bottom: 1.5rem;
-}
-
 /* Projects page specific styles (placeholder) */
-.projects-page .projects-grid {
-  display: grid;
-  gap: 1rem;
-}
-
 /* Contact page specific styles (placeholder) */
-.contact-page form {
-  max-width: 540px;
-}
-
 * {
   box-sizing: border-box;
 }
