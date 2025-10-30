@@ -30,7 +30,6 @@ Je suis **Vincent**, développeur passionné par le web et l’expérience utili
 ## 📜 Licence
 
 Ce projet est sous **licence MIT**. <br>
-Le code est **libre d’utilisation et de modification**, cependant si celui-ci est repris **tel quel**, la **source doit être mentionnée**. <br>
 © **Vins Liu**
 
 ---
