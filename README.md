@@ -1,16 +1,40 @@
-# React + Vite
+# 💼 Portfolio – Vincent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur mon **portfolio personnel**, développé avec **React** et **Vite**. <br>
+Ce projet présente mes compétences, mes réalisations et mon parcours de **développeur front-end**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Objectif
 
-## React Compiler
+Créer un site **moderne**, **rapide** et **responsive** pour partager mes projets et faciliter le contact professionnel.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🧩 Fonctionnalités
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 Thème clair / sombre
+- 📱 Design responsive
+- ⚡ Navigation fluide entre les sections
+
+---
+
+## 🧑‍💻 À propos
+
+Je suis **Vincent**, développeur passionné par le web et l’expérience utilisateur.<br>
+📍 Basé à **Paris**<br>
+📫 Contact : [Email](mailto:vincent00lav@outlook.com)
+
+---
+
+## 📜 Licence
+
+Ce projet est sous **licence MIT**. <br>
+Le code est **libre d’utilisation et de modification**, cependant si celui-ci est repris **tel quel**, la **source doit être mentionnée**. <br>
+© **Vins Liu**
+
+---
+
+## 🖼️ Aperçu du site
+
+![Preview](/src/assets/img/preview.png)

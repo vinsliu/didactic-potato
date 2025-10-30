@@ -6,13 +6,25 @@
 
   .nav-link {
     padding: 0.25rem 0;
+    margin-bottom: 0.2rem;
     color: var(--text);
     font-weight: 500;
     border-radius: 6px;
-    transition: background-color 150ms ease, color 150ms ease, padding-left 150ms ease;
+    transition: background-color 150ms ease, color 150ms ease,
+      padding-left 150ms ease;
 
-    &:hover { background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; }
+    &:hover {
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      padding-left: 0.5rem;
+    }
 
-    &.active { font-weight: 600; background: var(--hover-bg); color: var(--hover-text); padding-left: 0.5rem; padding-right: 0.5rem; }
+    &.active {
+      font-weight: 600;
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
   }
 }
